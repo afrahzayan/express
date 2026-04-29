@@ -29,6 +29,7 @@ const loginController = async (req, res) => {
     const { username, password } = req.body
 
     const adminCheck = await Admin.findOne({ username })
+    
 
     if (!adminCheck) {
         return res.status(404).json({ message: "User not found" })

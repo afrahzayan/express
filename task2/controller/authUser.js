@@ -52,6 +52,7 @@ const updateUser = async(req,res) => {
             updateData,
             {new: true}
         );
+        
         res.json(user)
     }catch(err) {
         res.status(500).json({error: err.message})
